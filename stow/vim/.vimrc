@@ -1,15 +1,3 @@
-" An example for a vimrc file.
-"
-" Maintainer:	Bram Moolenaar <Bram@vim.org>
-" Last change:	2019 Dec 17
-"
-" To use it, copy it to
-"	       for Unix:  ~/.vimrc
-"	      for Amiga:  s:.vimrc
-"	 for MS-Windows:  $VIM\_vimrc
-"	      for Haiku:  ~/config/settings/vim/vimrc
-"	    for OpenVMS:  sys$login:.vimrc
-
 " When started as "evim", evim.vim will already have done these settings, bail
 " out.
 if v:progname =~? "evim"
@@ -42,11 +30,6 @@ augroup vimrcEx
 augroup END
 
 " Add optional packages.
-"
-" The matchit plugin makes the % command work better, but it is not backwards
-" compatible.
-" The ! means the package won't be loaded right away but when plugins are
-" loaded during initialization.
 if has('syntax') && has('eval')
   packadd! matchit
 endif
