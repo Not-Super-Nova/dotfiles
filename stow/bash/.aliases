@@ -1,0 +1,30 @@
+# Often
+alias ls='ls --color=auto --block-size=M'
+alias vi='vim'
+alias cc='xclip -selection c'
+alias br='xbacklight -set'
+alias rr='realpath .'
+alias tb='nc termbin.com 9999'
+alias vs='vscodium'
+alias gck='git switch' 
+alias scc="scc | grep -v Estimated"
+
+# Lazy
+alias pacman='sudo pacman'
+alias reboot='sudo reboot'
+alias xinput='sudo xinput'
+alias cdkam='cd ~/projects/kamiblue'
+alias git-moduleupdate="git submodule update --init --recursive"
+alias git-log="git log --pretty=\"%h %s\""
+alias sctl="systemctl --user"
+alias diff="colordiff"
+
+# Hard to remember
+alias jekyllsite='./script/bootstrap && bundle exec jekyll serve'
+alias fixpulse="systemctl --user restart pulseaudio"
+alias fixheadphonesquality="pacmd set-card-profile $(pacmd list | grep -B 5 "MOMENTUM 3" | grep index | cut -c 12-) a2dp_sink"
+alias gpgpass='xclip -sel clip ~/.archived/gpgl1ving'
+alias batterylevel='upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep percentage | cut -c 26-29 | sed "s/ $//g"'
+alias vmic-start='adb forward tcp:8080 tcp:8080 && virtualmic http://localhost:8080/audio.opus'
+# alias topcmds='history | cut -c8- | sort | uniq -c | sort'
+# alias subl='LANG=en_US.UTF-8 LC_CTYPE=en_US.UTF-8 subl'

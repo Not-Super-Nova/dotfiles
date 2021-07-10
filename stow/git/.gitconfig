@@ -1,0 +1,15 @@
+[user]
+	email = ~@l1v.in
+	name = lv
+	signingKey = 359C456DFEF4811966291BD0AF236A45B0255DA8 
+[commit]
+	gpgSign = true
+[tag]
+	forceSignAnnotated = true
+[pull]
+	rebase = true
+[core]
+	autocrlf = input
+    eol = lf
+[init]
+    defaultBranch = master

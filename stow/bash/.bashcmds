@@ -1,0 +1,33 @@
+# Copy the contents of a url to a clipboard
+curlcp() {
+    if [[ -z "$1" ]]; then
+        echo "Missing arg 1!"
+        return
+    fi
+
+    curl -sSL "$1" | xclip -sel clip
+}
+
+# Curl only the headers of a url, and follow it
+hh() {
+    if [[ -z "$1" ]]; then
+        echo "Missing arg 1!"
+        return
+    fi
+
+    curl -sSL -D - "$1" -o /dev/null; 
+}
+
+# Upload a file via l1ving/fs-over-http
+upload() {
+    if [[ -z "$1" ]] || [[ -z "$2" ]]; then
+        echo "Missing args 1 or 2!"
+        return
+    fi
+
+    source "$HOME/.env"
+    curl -X POST \
+        -H "Auth: $FOH_SERVER_AUTH" \
+        -F "file=@$(echo "$2" | sed "s/~/\$HOME/g")" \
+        "https://i.l1v.in/public/$1"
+}
