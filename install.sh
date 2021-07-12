@@ -23,6 +23,7 @@ remove_all () {
     rm_log "$HOME/.bashrc"
     rm_log "$HOME/.paths"
     rm_log "$HOME/.profile"
+    rm_log "$HOME/.hidden"
     rm_log "$HOME/.fonts/NotoSansJP-Black.otf"
     rm_log "$HOME/.fonts/NotoSansJP-Bold.otf"
     rm_log "$HOME/.fonts/NotoSansJP-Light.otf"
@@ -40,7 +41,7 @@ remove_all () {
 }
 
 link_all () {
-    stow -vSt ~ bash git vim x11
+    stow -vSt ~ bash git vim x11 dolphin
     stow -vSt ~/.fonts fonts
     stow -vSt ~/.local/share/konsole/ konsole/
 }
@@ -61,6 +62,7 @@ cd "$(dirname "$0")/stow" || {
 if [[ -z "$1" ]]; then
     arr=("Removing default configurations:\n  "
     "bash:\n    ~/.aliases\n    ~/.bashcmds\n    ~/.bash_profile\n    ~/.bashrc\n    ~/.paths\n    ~/.profile\n  "
+    "dolphin:\n    ~/.hidden\n  "
     "fonts:\n    ~/.fonts/NotoSansJP-Black.otf\n    ~/.fonts/NotoSansJP-Bold.otf\n    ~/.fonts/NotoSansJP-Light.otf\n    ~/.fonts/NotoSansJP-Medium.otf\n    ~/.fonts/NotoSansJP-Regular.otf\n    ~/.fonts/NotoSansJP-Thin.otf\n  "
     "git:\n    ~/.gitconfig\n  "
     "konsole:\n    ~/.local/share/konsole/Profile 1.profile\n    ~/.local/share/konsole/Pastels 2.profile\n    ~/.local/share/konsole/Pastels 2.colorscheme\n  "
