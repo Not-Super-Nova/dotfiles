@@ -31,3 +31,8 @@ upload() {
         -F "file=@$(echo "$2" | sed "s/~/\$HOME/g")" \
         "https://i.l1v.in/public/$1"
 }
+
+rmss() {
+    source "$HOME/.env"
+    curl -X DELETE -H "Auth: $FOH_SERVER_AUTH" "https://i.l1v.in/public/i/$1"
+}
