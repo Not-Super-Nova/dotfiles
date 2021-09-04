@@ -1,4 +1,5 @@
 # Often
+alias g='grep'
 alias ls='ls --color=auto --block-size=M'
 alias vi='vim'
 alias cc='xclip -selection c'
