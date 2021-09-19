@@ -1,0 +1,6 @@
+configuration {
+    theme: "~/.config/rofi/colors-rofi-dark.rasi";
+    show-icons: true;
+    icon-theme: "Papirus-Dark"; 
+}
+@theme "/usr/share/rofi/themes/sidebar.rasi"

@@ -21,6 +21,7 @@ remove_all () {
     rm_log "$HOME/.bashcmds"
     rm_log "$HOME/.bash_profile"
     rm_log "$HOME/.bashrc"
+    rm_log "$HOME/.config/rofi/"
     rm_log "$HOME/.paths"
     rm_log "$HOME/.profile"
     rm_log "$HOME/.hidden"
@@ -40,10 +41,23 @@ remove_all () {
     echo ""
 }
 
+mkdir_log () {
+    echo "MK: $1"
+    mkdir -p "$1"
+}
+
+mkdir_all () { 
+    mkdir_log ~/.fonts 
+    mkdir_log ~/.local/share/konsole 
+    mkdir_log ~/.config/rofi
+    echo ""
+}
+
 link_all () {
     stow -vSt ~ bash git vim x11 dolphin
     stow -vSt ~/.fonts fonts
     stow -vSt ~/.local/share/konsole/ konsole/
+    stow -vSt ~/.config/rofi rofi
 }
 
 # Check if stow is installed
@@ -62,6 +76,7 @@ cd "$(dirname "$0")/stow" || {
 if [[ -z "$1" ]]; then
     arr=("Removing default configurations:\n  "
     "bash:\n    ~/.aliases\n    ~/.bashcmds\n    ~/.bash_profile\n    ~/.bashrc\n    ~/.paths\n    ~/.profile\n  "
+    "rofi:\n    ~/.config/rofi/  \n  "
     "dolphin:\n    ~/.hidden\n  "
     "fonts:\n    ~/.fonts/NotoSansJP-Black.otf\n    ~/.fonts/NotoSansJP-Bold.otf\n    ~/.fonts/NotoSansJP-Light.otf\n    ~/.fonts/NotoSansJP-Medium.otf\n    ~/.fonts/NotoSansJP-Regular.otf\n    ~/.fonts/NotoSansJP-Thin.otf\n  "
     "git:\n    ~/.gitconfig\n  "
@@ -87,6 +102,10 @@ fi
 remove_all || {
     log "Failed to remove all default configurations, check your permissions."
 }
+
+log "Creating required directories..."
+
+mkdir_all
 
 log "Automatically linking new configurations via stow..."
 
