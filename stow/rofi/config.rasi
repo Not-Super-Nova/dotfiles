@@ -3,4 +3,3 @@ configuration {
     show-icons: true;
     icon-theme: "Papirus-Dark"; 
 }
-@theme "/usr/share/rofi/themes/sidebar.rasi"
