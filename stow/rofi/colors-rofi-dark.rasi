@@ -24,7 +24,7 @@
     background: #000;
     foreground: #adadad;
     border-color: #ff0000;
-    spacing: 2;
+    spacing: 10;
 }
 
 window {
