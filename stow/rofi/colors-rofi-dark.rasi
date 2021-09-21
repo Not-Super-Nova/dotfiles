@@ -1,9 +1,9 @@
 * {
-    active-background: @background; 
-    active-foreground: #fff; // selected text color 
+    active-background: @background;
+    active-foreground: #fff; // selected text color
     normal-background: @background;
     normal-foreground: @foreground;
-    urgent-background: #ff0000; 
+    urgent-background: #ff0000;
     urgent-foreground: @foreground;
 
     alternate-active-background: @background;
@@ -21,9 +21,9 @@
     selected-urgent-foreground: #ff0000;
 
     background-color: @background;
-    background: #000; 
+    background: #000;
     foreground: #adadad;
-    border-color: #ff0000; 
+    border-color: #ff0000;
     spacing: 2;
 }
 
@@ -62,21 +62,21 @@ textbox-prompt-colon {
 listview {
     fixed-height: 0;
     border: 3px 0px 0px;
-    border-color: @foreground; 
+    border-color: @foreground;
     spacing: 4px;
     scrollbar: true;
     padding: 10px 0px 0px;
-    margin-bottom: 2px; 
+    margin-bottom: 2px;
 }
 
 element {
     border: 0;
     padding: 2px;
-    text-color: @normal-foreground; 
+    text-color: @normal-foreground;
 }
 
 element-text selected {
-    text-color: #fff; // selected text color 
+    text-color: #fff; // selected text color
 }
 
 element-text {
@@ -85,7 +85,7 @@ element-text {
 
 element.normal.normal {
     background-color: @normal-background;
-    text-color: #ff0000; 
+    text-color: #ff0000;
 }
 
 element.normal.urgent {
@@ -94,13 +94,13 @@ element.normal.urgent {
 }
 
 element.normal.active {
-    background-color: @background; 
-    text-color: #ff0000; 
+    background-color: @background;
+    text-color: #ff0000;
 }
 
 element.selected.normal {
     background-color: @background;
-    text-color: #ff0000; 
+    text-color: #ff0000;
 }
 
 element.selected.urgent {
@@ -109,7 +109,7 @@ element.selected.urgent {
 }
 
 element.selected.active {
-    background-color: @background; 
+    background-color: @background;
     text-color: @selected-active-foreground;
 }
 
