@@ -1,9 +1,9 @@
 * {
-    active-background: #5F556C;
-    active-foreground: #fff;
+    active-background: @background; 
+    active-foreground: #fff; // selected text color 
     normal-background: @background;
     normal-foreground: @foreground;
-    urgent-background: #443E5B;
+    urgent-background: #ff0000; 
     urgent-foreground: @foreground;
 
     alternate-active-background: @background;
@@ -13,17 +13,17 @@
     alternate-urgent-background: @background;
     alternate-urgent-foreground: @foreground;
 
-    selected-active-background: #443E5B;
-    selected-active-foreground: @foreground;
-    selected-normal-background: #5F556C;
-    selected-normal-foreground: @foreground;
-    selected-urgent-background: #656787;
-    selected-urgent-foreground: @foreground;
+    selected-active-background: #ff0000;
+    selected-active-foreground: #ff0000;
+    selected-normal-background: #ff0000;
+    selected-normal-foreground: #ff0000;
+    selected-urgent-background: #ff0000;
+    selected-urgent-foreground: #ff0000;
 
     background-color: @background;
-    background: #0E141B;
-    foreground: #dbcbd3;
-    border-color: @background;
+    background: #000; 
+    foreground: #adadad;
+    border-color: #ff0000; 
     spacing: 2;
 }
 
@@ -54,28 +54,29 @@ inputbar {
 
 textbox-prompt-colon {
     expand: false;
-    str: ":";
-    margin: 0px 0.3em 0em 0em;
+    str: "❯";
+    margin: 0 8px 0 8px;
     text-color: @normal-foreground;
 }
 
 listview {
     fixed-height: 0;
-    border: 2px 0px 0px;
-    border-color: @border-color;
-    spacing: 2px;
+    border: 3px 0px 0px;
+    border-color: @foreground; 
+    spacing: 4px;
     scrollbar: true;
-    padding: 2px 0px 0px;
+    padding: 10px 0px 0px;
+    margin-bottom: 2px; 
 }
 
 element {
     border: 0;
-    padding: 1px;
-    text-color: @normal-foreground;
+    padding: 2px;
+    text-color: @normal-foreground; 
 }
 
 element-text selected {
-    text-color: @active-foreground;
+    text-color: #fff; // selected text color 
 }
 
 element-text {
@@ -84,7 +85,7 @@ element-text {
 
 element.normal.normal {
     background-color: @normal-background;
-    text-color: @normal-foreground;
+    text-color: #ff0000; 
 }
 
 element.normal.urgent {
@@ -93,22 +94,22 @@ element.normal.urgent {
 }
 
 element.normal.active {
-    background-color: @active-background;
-    text-color: @active-foreground;
+    background-color: @background; 
+    text-color: #ff0000; 
 }
 
 element.selected.normal {
-    background-color: @selected-normal-background;
-    text-color: @selected-normal-foreground;
+    background-color: @background;
+    text-color: #ff0000; 
 }
 
 element.selected.urgent {
-    background-color: @selected-urgent-background;
+    background-color: @background;
     text-color: @selected-urgent-foreground;
 }
 
 element.selected.active {
-    background-color: @selected-active-background;
+    background-color: @background; 
     text-color: @selected-active-foreground;
 }
 
@@ -144,7 +145,7 @@ button {
 }
 
 button.selected {
-    background-color: @selected-normal-background;
+    background-color: @background;
     text-color: @selected-normal-foreground;
 }
 
