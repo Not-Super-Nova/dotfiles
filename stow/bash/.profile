@@ -5,3 +5,4 @@ export LANG=en_US.UTF-8
 export EDITOR=vim; 
 export GOPATH="$HOME/.local/share/go"
 export LOGIN_MSG="true"
+export ANDROID_SDK_ROOT="$HOME/.android/sdk"
