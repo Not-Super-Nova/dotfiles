@@ -1,5 +1,6 @@
-/home/liv/.local/bin
-/home/liv/.local/bin/gradle/bin
-/home/liv/.gem/ruby/2.7.0/bin
-/home/liv/.cargo/bin
-/home/liv/.android/sdk/tools/bin
+$HOME/.local/bin
+$HOME/.local/bin/gradle/bin
+$HOME/.gem/ruby/2.7.0/bin
+$HOME/.cargo/bin
+$HOME/.android/sdk/tools/bin
+$GOPATH/bin

@@ -16,7 +16,7 @@ source ~/.bashcmds
 
 ## Export paths from ~/.paths
 while read path; do
-    export PATH="$path:$PATH"
+    export PATH="$(eval echo -e "$path"):$PATH"
 done </"$HOME/.paths"
 
 ## Echo login shell (set in .profile)
